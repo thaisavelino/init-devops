@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    05                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/15 19:50:46 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/23 17:14:37 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 5. Identify the IP address of the DNS that responds to the following url: slash16.org
+### - nslookup  to discover whatever domain resolves to a specific IP
+### - grep server's line to check DNS server IP number
+### - awk the second line where is the IP number
+### * besides nslookup you can use dig command which is similar but provides more details.
+#!/bin/bash
+nslookup slash16.org | grep Server | awk '{print $2}'

@@ -1,0 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    09                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/15 19:50:03 by tavelino          #+#    #+#              #
+#    Updated: 2018/06/15 19:50:06 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 9. Find the external IP of 42.fr (command output)
+### nslookup with external server 8.8.8.8
+### take just address lines
+### awk to take specific lines and choose rows with external IP from 42.fr
+### nslookup 42.fr 8.8.8.8 | grep Address | awk 'NR>=2&&NR<=4'
+#!/bin/bash
+echo "Address: 10.52.1.76"
+echo "Address: 10.52.1.11"
+echo "Address: 10.52.1.12"

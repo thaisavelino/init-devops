@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    14                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 17:47:19 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 20:40:53 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 14. Run the ‘tail -f /var/log/syslog‘ command in background
+# A. To run in background we must add "&" in the end.
+
+#!/bin/bash
+sudo tail -f /var/log/syslog &

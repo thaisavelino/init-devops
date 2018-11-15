@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    03                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/15 19:51:01 by tavelino          #+#    #+#              #
+#    Updated: 2018/06/15 19:51:02 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 3. Identify the MAC address of the Wi-Fi card
+### - list with ifconfig -L 
+### - take wifi card wich is en1
+### - grep ether to take just the "ether" row
+### - awk to take the second collum wich is the MAC address
+#!/bin/bash
+ifconfig -L en1 | grep "ether" | awk '{print $2}'

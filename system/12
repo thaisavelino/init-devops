@@ -1,0 +1,23 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    12                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 17:12:57 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 17:24:32 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 12. Figure out the exact size of each folder of /var in a humanly understandable way
+# followed by the path of it.
+# 
+# A. Command "du" check free space at one ore more files or directories.
+#	 Here I also include some flags:
+#  -s to display sumary without sub directories
+#  -h human readable, so we can see the size wifh format: K, M...
+#  - and I included "sort -n" so we can see it ascending order
+
+#!/bin/bash
+sudo du -sh /var/* | sort -n

@@ -1,0 +1,37 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    09                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 16:35:40 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 16:46:46 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 9. What command lets you know who is connected to the System?
+# A. we could use "finger", "users", "who" or "w". Lets use the who
+
+#!/bin/bash
+who
+
+# ---------- Commands we could use  ----------
+#
+# - finger - You can obtain a list of information about current users by entering the finger command with no options
+# - users - For a list of usernames currently logged in, presented in a condensed, single-line format.
+# - who - For more information, including each login of a username, the terminal users are attached to, the date and time that login began, and possibly the computer from which they are making the connection.
+# - w - For extensive information, including username, terminal, IP number of the source computer, the time the login began, any idle time, process CPU cycles, job CPU cycles, and the currently running command.
+# 
+# ---------- Example ----------
+# 
+# vagrant@stretch:~$ users
+# vagrant
+# 
+# vagrant@stretch:~$ who
+# vagrant  pts/0        2018-10-24 13:44 (10.0.2.2)
+# 
+# vagrant@stretch:~$ w
+#  14:37:23 up  1:02,  1 user,  load average: 0.00, 0.00, 0.00
+#  USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+#  vagrant  pts/0    10.0.2.2         13:44    0.00s  0.25s  0.00s w

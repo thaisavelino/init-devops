@@ -1,0 +1,45 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    04                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 22:27:05 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/25 22:08:40 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 4. Write a script which monitors the modifications made to the /etc/crontab 
+# file and sends an e-mail to root if the file is modified. Create a scheduled 
+# task to run this script everyday at midnight.
+#
+#!/bin/bash
+TARGET=/etc/crontab
+CRONTAB=`sudo md5sum $TARGET | awk '{ print $1 }'`
+BACKUP='sudo cat /etc/.crontab_bkp_md5sum'
+if [ ! -e $BACKUP ]; then
+	echo "Old version of crontab does not exist yet."
+	sudo cp $CRONTAB $BACKUP
+	exit 0
+fi
+if [ -z $CRONTAB ] | [ -z $BACKUP ]; then
+	echo "md5sum is empty!"
+fi
+if [ "$CRONTAB" != "$BACKUP" ]; then
+	sudo md5sum /etc/crontab | awk '{print $1}' > /etc/.crontab_bkp_md5sum
+	echo "Crontab has  been modified in the last 24 h." | mail -s \
+	"ALERT, /etc/crontab was eddited" root
+fi
+sudo cp $CRONTAB $BACKUP
+## add this line to /etc/crontab
+## 0 0 0 * 0-6 root sh /root/crontab_updatecheck.sh
+##
+## Example of job definition:
+## .---------------- minute (0 - 59)
+## |  .------------- hour (0 - 23)
+## |  |  .---------- day of month (1 - 31)
+## |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+## |  |  |  |  .---- day of week (0 - 6) (Sunday=0) OR sun,mon,tue,wed,thu,fri,sat
+## |  |  |  |  |
+## *  *  *  *  * user-name  command to be executed

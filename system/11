@@ -1,0 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    11                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 17:05:02 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 17:08:47 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 11. Name the command that displays the available space left and used on the system
+# in an humanly understandable way
+# A. To display how much disk space is free on mounted file systems in Unix, we use the df command.
+# the flag -h is human readable, as we can see on manual:
+#	 -h, --human-readable
+#  		 print sizes in powers of 1024 (e.g., 1023M) 
+
+#!/bin/bash
+df -h

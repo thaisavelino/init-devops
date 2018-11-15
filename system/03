@@ -1,0 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    03                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 16:07:05 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 16:09:11 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 3. What file has to be modified to make it permanent?
+#!/bin/bash
+echo "You must modify the file:\n	/etc/hostname \n to make this permanent";

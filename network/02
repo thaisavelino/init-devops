@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/15 19:51:07 by tavelino          #+#    #+#              #
+#    Updated: 2018/06/15 19:51:09 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 2. Identify and display the Ethernet interface characteristics
+### - list with ifconfig -L 
+### - take ethernet interface wich is en0
+### - use inet to take the row
+### - awk to take the second collum wich is the IP address
+#!/bin/bash
+ifconfig -L en0 | grep "inet" | awk '{print $2}'

@@ -1,0 +1,23 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    18                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 19:38:17 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 20:20:55 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#!/bin/bash
+
+# 18. With the previous command, authorize only IP addresses from 10.0.0.0/8
+# to connect to your system
+# A.
+# incoming ssh from the LAN (flag -s for the source)
+sudo iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
+# Enable al outgoing traffic to internet (flag -d for destination because 
+# its outside the firewall)
+sudo iptables -A OUTPUT -d 10.0.0.0/8 -j ACCEPT
+#https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands

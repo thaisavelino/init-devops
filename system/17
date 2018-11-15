@@ -1,0 +1,31 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    17                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 19:19:35 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 20:42:00 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 17. Find the command which gives the list of firewall rules 
+# A.
+#  By default Debian installation comes with the program "iptables" 
+#  configured to allow all traffic.
+#
+#  A network firewall is a set of rules to allow or deny passage of network traffic,
+#  through one or more network devices. A network firewall may also perform more 
+#  complex tasks, such as network address translation, bandwidth adjustment, 
+#  provide encrypted tunnels and much more related to network traffic.
+#
+#  To list the ruleset of any table, we use flag -L
+#  You can list other tables using -t, for example, to see the nat 
+#  (Network Address Translation) table:
+#  iptables -L -t nat
+#
+#https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules
+
+#!/bin/bash
+sudo iptables -L

@@ -1,0 +1,32 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    15                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 18:01:42 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 18:22:06 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 15. Find the command that kills the background command’s process
+# A. Command Kill is used to kill process, doing 
+#
+# sudo kill -KILL PID
+# 
+# to find PID (id of the process) we can use the command "jobs -p" to check
+# just the number of job ID. Then we can replace commmand on the PID
+# so it will be:
+#
+# sudo kill -KILL $(jobs -p)
+#
+# a fter this we can use jobs -l or jobs -p to check if there are anything
+# running on the background.
+# Maybe we could use ps axu for this.. but it show more proccess not just bg 
+# as command jobs..
+# ex.:
+# sudo kill -KILL $(ps axu | grep tail | awk '{print $2}')
+
+#!/bin/bash
+sudo kill -KILL $(jobs -p)

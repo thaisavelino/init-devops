@@ -1,0 +1,26 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    08                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/15 19:50:14 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/23 17:41:00 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 8 - Find the provider of slash16.org
+### If we try with another site:
+### whois ganbatte.com.br | grep nserver | awk '{print $2}' | head -1
+### will show RedeHost  
+### another exemple is to check server
+###  curl -I slash16.org | grep "Server"
+### For slash16 is AmazonS3
+### if we do this with ganbatte.com.br will show Apache wich is the Server used
+### by the provider
+#!/bin/bash
+echo "If we check command:\n\n	whois slash16.org | grep "Name Server"\n";
+echo "The answer is:\n";
+echo "Name Server: NS-1236.AWSDNS-26.ORG\nName Server: NS-144.AWSDNS-18.COM\nName Server: NS-686.AWSDNS-21.NET\nName Server: NS-1989.AWSDNS-56.CO.UK"
+echo "\n\n As we can see Amaxon AWS is the provider"

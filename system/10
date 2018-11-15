@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    10                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 16:47:00 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 17:02:37 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 10. Name the command that lists the partition tables of drives?
+# A. The following command list all existing disk partition on your system.
+# We will use the flag -l to list all partitions 
+#!/bin/bash
+sudo fdisk -l

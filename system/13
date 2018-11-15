@@ -1,0 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    13                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 17:25:05 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 17:46:13 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 13. Name the command that find, in real time, currently running processes
+#
+# A. When your system is running some proccess are running too. To check wich one 
+# is running now we can use the command "ps".
+# Here I use flags -axu
+# we could add " | pg" to scroll the information so we dont loose anything
+# in case its a long list.
+
+#!/bin/bash
+ps axu

@@ -1,0 +1,16 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    14                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/15 19:02:07 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/23 18:42:30 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#14. What file contains the local DNS entries?
+
+#!/bin/bash
+echo "As shown at https://en.wikipedia.org/wiki/Hosts_(file)\nThe /etc/hosts contains local DNS entries.";

@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    15                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/15 19:49:00 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/23 19:26:03 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 15. Make the intra.42.fr address reroute to 46.19.122.85
+# A: https://www.weg.ucar.edu/documentation/hostfile-unix.html
+#!/bin/bash
+echo "Sometimes we need to configure a hostname to points to another address.\n Like, to test our code, we can point to a test or development server \ninstead of production one for example.";
+echo "For this we need to modify /etc/hosts file";
+echo "1- vi /etc/hosts\n2- write new adress [space] hostname\n3- save this file\n4- killall -HUP lookupd";
+echo "After modify you can verify this accessing the URL in your Browser";

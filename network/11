@@ -1,0 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    11                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/15 19:49:36 by tavelino          #+#    #+#              #
+#    Updated: 2018/06/15 19:49:39 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 11. Use the output of the previous command to find the name and IP address of the
+#device that makes the link between you (local network) and the outside world
+#!/bin/bash
+echo "Using the command:\n traceroute slash16.org \nthe device is: \n";
+echo "	2  nat-1 (10.60.1.11)  0.187 ms  0.168 ms  0.177 ms \n";
+echo "nat means Network Address Translation, so this is the device that makes \nthe link between  me and the outside world as asked.";

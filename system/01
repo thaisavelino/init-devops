@@ -1,0 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    01                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 15:48:26 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 16:02:26 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 1. In what file can you find the installed version of your Debian?
+#!/bin/bash
+echo "The easiest way on how to check wich Debian version you are running is \n by reading the content of /etc/issue file. command:";
+echo "\n	cat /etc/debian_version";
+echo "	9.5";
+echo "\n If you don't know wich system is using try check /etc/issue";

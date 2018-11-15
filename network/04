@@ -1,0 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    04                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/15 19:50:54 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/23 17:09:29 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 4. Identifiy the default gateway in the routing table
+### - netstat to print routing information
+### - 'r' flag to check routing table.
+### - '-n' will only show numerical addresses 
+###   rather than performing any sort of name resolution.
+### - grep the 'default' line and awk to choose the 2 column
+### - head to choose the first line which has the adress number
+#!/bin/bash
+netstat -nr | grep "default" | awk '{print $2}' | head -1

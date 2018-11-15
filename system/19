@@ -1,0 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    19                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 19:45:57 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 20:43:01 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#!/bin/bash
+# 19. With the previous command, forbid all others IP
+# A. we can use REJECT or DROP to block network connections from any IP. The
+# difference is that Drop will block and Reject will reject the connection
+# and respond the request with a "connection refused" error.
+sudo iptables -A INPUT -j REJECT
+sudo iptables -A OUTPUT -j REJECT
+#
+## after this we can run the 17 again to check the rules. example:
+##
+#		sudo iptables -L
+#
+#https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands

@@ -1,0 +1,34 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    16                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 18:22:56 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 19:19:26 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 16. Find the service which makes it possible to run specific tasks following
+# a regular schedule.
+
+#!/bin/bash
+echo "As we can see at: https://debian-handbook.info/browse/stable/sect.task-scheduling-cron-atd.html"
+echo "Scheduling Tasks with cron and atd\n";
+echo "-	cron is the daemon responsible for executing scheduled and recurring commands (every day, every week, etc.)";
+echo "-	atd is that which deals with commands to be executed a single time, but at a specific moment in the future.\n";
+echo "In a Unix system, many tasks are scheduled for regular execution:\n- rotating the logs; \n- updating the database for the locate program;\n- back-ups;\n- maintenance scripts (such as cleaning out temporary files).";
+echo "By default, all users can schedule the execution of tasks. Each user has thus their own crontab in which they can record scheduled commands. It can be edited by running crontab -e (its content is stored in the /var/spool/cron/crontabs/user file).";
+echo "\n";
+echo "The cron package includes by default some scheduled commands that execute:";
+echo "- programs in the /etc/cron.hourly/ directory once per hour;";
+echo "- programs in /etc/cron.daily/ once per day;";
+echo "programs in /etc/cron.weekly/ once per week;";
+echo "programs in /etc/cron.monthly/ once per month.";
+echo "Many Debian packages rely on this service: by putting maintenance scripts in these directories, they ensure optimal operation of their services.";
+
+echo "\n --- example of cron service - crontab file ---";
+echo " #Format \n #min hour day mon dow  command \n\n # Download data every night at 7:25 pm \n 25  19   *   *   *    $HOME/bin/get.pl\n\n# 8:00 am, on weekdays (Monday through Friday) \n  00  08   *   *   1-5  $HOME/bin/dosomething\n\n# Restart the IRC proxy after each reboot \n@reboot /usr/bin/dircproxy";
+echo "\n --- Example of atd command ---";
+echo "$ at 09:00 27.07.15 <<END \n> echo 'Don't forget to wish a Happy Birthday to Raphaël!' | mail lolando@debian.org \n> END\nwarning: commands will be executed using /bin/sh\njob 31 at Mon Jul 27 09:00:00 2015";

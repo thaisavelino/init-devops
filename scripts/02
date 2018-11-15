@@ -1,0 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tavelino <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/24 21:02:36 by tavelino          #+#    #+#              #
+#    Updated: 2018/10/24 22:25:34 by tavelino         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#!/bin/bash
+# 2. Write a script which updates all the package sources, then all the packages, and then
+# logs everything in a file named /var/log/update_script.log. Create a scheduled
+# task for this script, once per week at 4 AM.
+echo "apt-get update -y && apt-get upgrade -y >> /var/log/update_script.log" \
+ > weeklyUpdate.sh
+chmod 755 weeklyUpdate.sh
+sudo mv weeklyUpdate.sh /etc/cron.weekly
+echo "0 4 * * 1 sh /etc/cron.weekly/weeklyUpdate.sh" | crontab
+#check current crontabs
+crontab -l
+# source
+# # https://awc.com.my/uploadnew/5ffbd639c5e6eccea359cb1453a02bed_Setting%20Up%20Cron%20Job%20Using%20crontab.pdf
