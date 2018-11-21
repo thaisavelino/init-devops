@@ -15,3 +15,6 @@ For further information check instructions at **init.en.pdf** file.
 
 Website (http://slash16.org/)
 Linkedin (https://www.linkedin.com/company/slash16/)
+
+### Check my Projects
+To check more projects go to my [Portfolio page](https://github.com/thaisavelino/Portfiolio_42_SiliconValley_Paris)
